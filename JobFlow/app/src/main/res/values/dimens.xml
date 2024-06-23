@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Khai báo các giá trị dimen tại đây -->
+    <dimen name="dialog_padding">16dp</dimen>
+</resources>

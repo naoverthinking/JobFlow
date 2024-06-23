@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/text_project"
+        android:id="@+id/navhome"
+        android:icon="@drawable/icon_home"/>
+    <item android:title="@string/text_mywork"
+        android:id="@+id/navwork"
+        android:icon="@drawable/icon_work"/>
+    <item android:title="@string/text_message"
+        android:id="@+id/navchat"
+        android:icon="@drawable/icon_chat"/>
+    <item android:title="@string/text_notification"
+        android:id="@+id/navnotification"
+        android:icon="@drawable/icon_notification"/>
+</menu>

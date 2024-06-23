@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:id="@+id/chatMyLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="right"
+            android:layout_marginEnd="20dp">
+
+            <TextView
+                android:id="@+id/chatMyMsgTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/msg_me"
+                android:paddingStart="10dp"
+                android:paddingTop="20dp"
+                android:paddingEnd="10dp"
+                android:gravity="right"
+                android:paddingBottom="20dp"
+                android:text="This is my messenger"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/chatMyTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:text="ngày tháng"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="end"
+                android:textSize="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/chatOpoLayout"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="100dp">
+            <TextView
+                android:id="@+id/chatOpoMsgTxt"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="This is opponent messenger"
+                android:background="@drawable/msg_opo"/>
+            <TextView
+                android:id="@+id/chatOpoTimeTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:text="ngày tháng"
+                android:layout_marginTop="5dp"
+                android:textSize="10dp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

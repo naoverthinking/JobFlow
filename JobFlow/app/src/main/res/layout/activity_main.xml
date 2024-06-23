@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_home"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/main_drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nameWS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/company_name"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/openProfile"
+                app:layout_constraintEnd_toStartOf="@+id/openProfile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/openProfile" />
+
+            <ImageView
+                android:id="@+id/openProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="6"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_use_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/toggle_change_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/ic_adjust_home"
+                app:layout_constraintEnd_toEndOf="@+id/openProfile"
+                app:layout_constraintTop_toBottomOf="@+id/openProfile" />
+
+            <SearchView
+                android:id="@+id/edtSearch"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_edt_search"
+                android:drawableLeft="@drawable/icon_search"
+                android:drawablePadding="10dp"
+                android:gravity="left"
+                android:hint="@string/text_search"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/toggle_change_theme"
+                app:layout_constraintEnd_toStartOf="@+id/toggle_change_theme"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/toggle_change_theme" />
+
+            <!--            <androidx.cardview.widget.CardView-->
+            <!--                android:id="@+id/cardbottomnav"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent">-->
+
+            <!--                <com.google.android.material.bottomnavigation.BottomNavigationView-->
+            <!--                    android:id="@+id/bottomnav"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    app:menu="@menu/home_bottom_nav_menu" />-->
+            <!--            </androidx.cardview.widget.CardView>-->
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_content_home"
+                app:layout_constraintBottom_toTopOf="@+id/tvDuAn"
+                app:layout_constraintTop_toBottomOf="@+id/edtSearch" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guiV50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guiV25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.25" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guiV75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.75" />
+
+
+            <TextView
+                android:id="@+id/tvDuAn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#DEF1FD"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:lines="2"
+                android:paddingHorizontal="5dp"
+                android:paddingTop="10dp"
+                android:text="@string/du_an"
+                android:textColor="@color/color_item_nav_home"
+                android:textSize="14dp"
+                app:drawableTint="@color/color_item_nav_home"
+                app:drawableTopCompat="@drawable/ic_du_an_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/guiV25"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCongViecCuaToi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#DEF1FD"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:lines="2"
+                android:paddingHorizontal="5dp"
+                android:paddingTop="10dp"
+                android:text="@string/cong_viec_cua_toi"
+                android:textColor="@color/color_item_nav_home"
+                android:textSize="14dp"
+                app:drawableTint="@color/color_item_nav_home"
+                app:drawableTopCompat="@drawable/ic_cong_viec_cua_toi"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guiV50"
+                app:layout_constraintStart_toStartOf="@+id/guiV25" />
+
+            <TextView
+                android:id="@+id/tvTinNhan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#DEF1FD"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:lines="2"
+                android:paddingHorizontal="5dp"
+                android:paddingTop="10dp"
+                android:text="@string/tin_nhan"
+                android:textColor="@color/color_item_nav_home"
+                android:textSize="14dp"
+                app:drawableTint="@color/color_item_nav_home"
+                app:drawableTopCompat="@drawable/ic_tin_nhan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guiV75"
+                app:layout_constraintStart_toStartOf="@+id/guiV50" />
+
+            <TextView
+                android:id="@+id/tvThongBao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#DEF1FD"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:lines="2"
+                android:paddingHorizontal="5dp"
+                android:paddingTop="10dp"
+                android:text="@string/tin_nhan"
+                android:textColor="@color/color_item_nav_home"
+                android:textSize="14dp"
+                app:drawableTint="@color/color_item_nav_home"
+                app:drawableTopCompat="@drawable/ic_thong_bao"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guiV75" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigationview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/background_navbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="20dp">
+
+                <TextView
+                    android:id="@+id/workspacesss"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="10dp"
+                    android:text="Workspaces"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/navigation_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/workspacesss" />
+                <!-- Menu -->
+                <LinearLayout
+                    android:id="@+id/menu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/line_horizontal" />
+
+                    <TextView
+                        android:id="@+id/testanm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textview_background_selector"
+                        android:drawableStart="@drawable/icon_add_black2"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:stateListAnimator="@drawable/textview_selector"
+                        android:text="Add workspaces"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/textview_background_selector"
+                        android:drawableStart="@drawable/icon_logout"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:paddingHorizontal="20dp"
+                        android:paddingVertical="10dp"
+                        android:stateListAnimator="@drawable/textview_selector"
+                        android:text="Logout"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>

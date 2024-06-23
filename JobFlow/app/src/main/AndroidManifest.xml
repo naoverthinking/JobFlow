@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon_ngoigoccay1"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_ngoigoccay1"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JobFlow"
+        tools:targetApi="31">
+        <activity
+            android:name=".views.profile.AddMemberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.search.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.chat.VideoCallActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.task.DetailsProject2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".views.task.DetailsProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.task.ProjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.task.TaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.chat.ChatDetailsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".views.chat.ChatRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".views.login.LoginActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".views.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="Notification" />
+
+        <service
+            android:name=".notification.FCMNotificationService"
+            android:exported="false"
+            android:permission="TODO">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="google.com.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.MyForegroundService" />
+
+        <receiver android:name=".notification.MyBroadCastReceiver" />
+    </application>
+
+</manifest>

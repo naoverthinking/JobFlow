@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="5dp"
+        android:padding="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="5">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="5"
+                android:src="@drawable/icon_person_primary"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="5dp"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/online">
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Name"
+                android:gravity="left"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_weight="4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:text="content"
+                android:gravity="left"
+                android:layout_weight="4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="1 day"
+                android:gravity="center"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:cardCornerRadius="5dp"
+                android:layout_weight="2"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="@color/online">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:text="4"/>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
